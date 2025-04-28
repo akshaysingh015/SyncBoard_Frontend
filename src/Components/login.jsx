@@ -114,7 +114,7 @@ const Login = () => {
           <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-[#04080e] via-[#110d22] to-[#2c0f25] flex items-center justify-center">
           <img
           src="/syncboard-hero.png"
-          className="h-130"
+          className="h-130 transform transition-all ease-in-out duration-700 hover:scale-105"
           />
           </div>
         </div>
