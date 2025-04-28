@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import FloatingLabelInput from "./input_style";
-// import Conversation4.gif from "../assets/Conversation4.gif"; // Import your GIF here
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Username:", username);
+    // console.log("Username:", username);
     console.log("Email:", email);
     console.log("Password:", password);
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#484c65] to-[#251233] px-4 font-tagesschrift">
-      <div className="bg-gradient-to-br from-[#1d2732] to-[#0a0f17] rounded-2xl shadow-2xl w-full max-w-[800px] flex overflow-hidden">
+      <div className="bg-gradient-to-br from-[#1d2732] to-[#0a0f17] rounded-2xl shadow-2xl w-full max-w-[1000px] flex overflow-hidden  min-h-[600px]">
         {/* Left side - Form */}
         <div className="w-full md:w-1/2 p-10 relative flex flex-col justify-center">
           {/* SyncBoard Badge */}
@@ -38,7 +38,7 @@ const Login = () => {
           </div>
 
           {/* Inputs */}
-          <div className="mt-3">
+          {/* <div className="mt-3">
             <FloatingLabelInput
               id="username"
               name="username"
@@ -48,7 +48,7 @@ const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
               required
             />
-          </div>
+          </div> */}
 
           <div className="mt-3">
             <FloatingLabelInput
@@ -102,24 +102,20 @@ const Login = () => {
           <div className="mt-8 text-center">
             <p className="text-gray-400">
               Don't have an account?{" "}
-              <a
-                href="#signup"
-                className="text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                Sign Up
-              </a>
+              <Link to="/signup" className="text-purple-400 hover:text-purple-300 underline">
+              Sign Up
+            </Link>
             </p>
           </div>
         </div>
 
         {/* Right side - Empty */}
-        <div className="hidden md:block md:w-1/2 relative overflow-hidden">
-          <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-[#04080e] via-[#110d22] to-[#2c0f25]">
+        <div className="hidden md:block md:w-300 relative overflow-hidden">
+          <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-[#04080e] via-[#110d22] to-[#2c0f25] flex items-center justify-center">
           <img
-          src="" 
-          alt="Collaboration animation"
-          className="absolute top-8 right-8 w-32 animate-float"
-        />
+          src="public\Screenshot 2025-04-28 212150.png"
+          className="h-130"
+          />
           </div>
         </div>
       </div>
