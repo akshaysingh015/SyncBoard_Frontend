@@ -113,7 +113,7 @@ const Login = () => {
         <div className="hidden md:block md:w-300 relative overflow-hidden">
           <div className="absolute inset-0 animate-gradient bg-gradient-to-br from-[#04080e] via-[#110d22] to-[#2c0f25] flex items-center justify-center">
           <img
-          src="public/syncboard-hero.png"
+          src="/syncboard-hero.png"
           className="h-130"
           />
           </div>
